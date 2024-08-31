@@ -1,0 +1,344 @@
+.portfolio {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        rgba(245, 245, 245, 0),
+        rgb(245, 245, 245) 20%,
+        rgb(245, 245, 245) 50%,
+        rgb(245, 245, 245) 80%,
+        rgba(245, 245, 245, 0) 100%
+      ),
+      url("../img/portfolio/pf-background.webp"), rgb(245, 245, 245);
+
+    background-size: cover;
+
+    filter: grayscale(100%) opacity(70%);
+    background-attachment: fixed;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__btn-capture {
+    color: $primary;
+    line-height: 20px;
+  }
+
+  &__svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.gosobj {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid $primary;
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__body {
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    column-gap: 4px;
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 274.25px;
+  }
+
+  &__img {
+    height: 220px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    background-color: $white;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+
+  &__descr {
+    color: $grey-dark;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.comobj {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid $primary;
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-capture {
+    color: $primary;
+    font-size: 20px;
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__body {
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    gap: 4px;
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 274.25px;
+  }
+
+  &__img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    background-color: $white;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+  }
+
+  &__descr {
+    color: $grey-dark;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.liveobj {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid $primary;
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-capture {
+    color: $primary;
+    font-size: 20px;
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__body {
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    @extend %grid;
+    gap: 4px;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-template-areas:
+      "cell-1 cell-1 cell-2 cell-2 cell-3 cell-3"
+      "cell-4 cell-4 cell-4 cell-5 cell-5 cell-5";
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    background-color: $white;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+  }
+
+  &__descr {
+    color: $grey-dark;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.curobj {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid $primary;
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-capture {
+    color: $primary;
+    font-size: 20px;
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__body {
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 4px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    background-color: $white;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+  }
+
+  &__descr {
+    color: $grey-dark;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

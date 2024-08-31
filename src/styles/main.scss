@@ -1,0 +1,24 @@
+@import "./tools/_variables.scss";
+@import "./tools/_templates.scss";
+@import "./tools/_mixins.scss";
+
+// common styles:
+@import "common/fonts.scss";
+@import "common/normalize.scss";
+@import "common/style-reset.scss";
+
+// extands:
+@import "./extands/container.scss";
+@import "./extands/btn.scss";
+@import "./extands/stop-scroll.scss";
+
+// modules:
+@import "modules/1-header.scss";
+@import "modules/2-hero.scss";
+@import "modules/3-products.scss";
+@import "modules/4-portfolio.scss";
+@import "modules/5-manufacture.scss";
+@import "modules/6-about-us.scss";
+@import "modules/7-advantages.scss";
+@import "modules/8-contacts.scss";
+@import "modules/9-footer.scss";

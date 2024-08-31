@@ -1,0 +1,47 @@
+.advantages {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        rgba(245, 245, 245, 0),
+        rgb(245, 245, 245) 20%,
+        rgb(245, 245, 245) 50%,
+        rgb(245, 245, 245) 80%,
+        rgba(245, 245, 245, 0) 100%
+      ),
+      url("../img/advantages/background.webp"), rgb(245, 245, 245);
+
+    background-size: cover;
+
+    filter: grayscale(100%) opacity(70%);
+    background-attachment: fixed;
+  }
+
+  &__grid {
+    display: grid;
+
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    row-gap: 40px;
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__svg {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,18 @@
+header.header
+  .header__container.container
+    .header__logo 
+      +svg('logo',  'header')
+    .header__nav 
+      ul.header__list.list-reset 
+        +linkInItem('header__item', 'header__link', 'products-link', 'Каталог продукции')
+        +linkInItem('header__item', 'header__link', 'portfolio-link', 'Портфолио')
+        +linkInItem('header__item', 'header__link', 'about-us-link', 'О нас')
+        +linkInItem('header__item', 'header__link', 'manufacture-link', 'Производство')
+        +linkInItem('header__item', 'header__link', 'contacts-link', 'Контакты')
+    .header__phones.phones 
+      .phones__block 
+        +svg('phone','phones')
+        a(href='tel:+73812700999').link-reset.phones__link +7&nbsp;(3812)&nbsp;700-999
+      .phones__block 
+        +svg('phone','phones')
+        a(href='tel:+738125075559').link-reset.phones__link +7&nbsp;(3812)&nbsp;507-555

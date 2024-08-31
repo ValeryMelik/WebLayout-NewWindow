@@ -1,0 +1,50 @@
+.products {
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 39.01px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-height: 100%;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: left;
+  }
+
+  &__img {
+    margin-bottom: 32px;
+  }
+
+  &__descr {
+    margin-bottom: 32px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+
+    &_first {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}

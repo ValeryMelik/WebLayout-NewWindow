@@ -1,0 +1,50 @@
+.btn {
+  font-family: Montserrat;
+  font-weight: 700;
+  line-height: 19.5px;
+
+  padding: 20px;
+
+  &_primary {
+    border: none;
+
+    color: $white;
+    background-color: $primary;
+
+    &:hover,
+    &:focus {
+      background-color: $hover;
+    }
+
+    &:active {
+      background-color: $active;
+    }
+
+    &:disabled {
+      background-color: $grey;
+    }
+  }
+
+  &_secondary {
+    border: 2px solid $primary;
+
+    color: $primary;
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $primary;
+    }
+
+    &:active {
+      background-color: $active;
+    }
+
+    &:disabled {
+      color: $grey;
+      background-color: $white;
+      border-color: $grey;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+mixin svg(id, parent)
+  svg(class=`${parent}__${id} ${parent}__svg img-reset`): use(xlink:href=`img/sprite.svg#${id}`)
+
+mixin ItemLink(itemClass, linkClass, text, idLink)
+  li(class=itemClass)
+    if (!idLink)
+      a.link-reset(class=linkClass href="#")=text
+    else
+      a.link-reset(class=linkClass href="#" id=idLink)=text
+
+mixin linkInItem(itemClass, linkClass, linkId, text)
+  li(class=itemClass)
+    a.link-reset(class=linkClass href="#" id=`${linkId}-link`)=text
+
+mixin btn-primary(parent) 
+  button.btn-reset(type="click" class=`${parent}__btn btn btn_primary`) Расчет вашего проекта
+
+mixin btn-secondary(parent) 
+  button.btn-reset(type="click" class=`${parent}__btn btn btn_secondary`) ПОЛУЧИТЬ РАСЧЕТ
+
+mixin checkbox-form(section)
+  label(class=`${section}__checkbox`).checkbox
+    input(type="checkbox", name="agreement", checked).checkbox__input
+    span.checkbox__name Принимаю&nbsp;#[a.link-reset.checkbox__link(href="#") пользовательское&nbsp;соглашение]
+
+mixin checkbox(name)
+  label.checkbox
+    input(type="checkbox", name=name).checkbox__input
+    span.checkbox__name=name
+
+mixin navlinkItem(name)
+  a.link-reset(href='#').navlink__link=name
+  span.navlink__slash /

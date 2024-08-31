@@ -1,0 +1,51 @@
+.hero {
+  color: $white;
+
+  background: transparent url("../img/hero/hero-1920.webp") center center /
+    cover no-repeat;
+  background-attachment: fixed;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43.88px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__capture {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43.88px;
+    text-align: left;
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__btn {
+    margin-top: 26px;
+    max-width: 244px;
+  }
+}

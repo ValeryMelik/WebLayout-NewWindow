@@ -1,0 +1,23 @@
+section#contacts-section.contacts
+  #map.map
+  .contacts__container.container
+    .contacts__block
+      h2.title-reset.contacts__title  КОНТАКТЫ
+      ul.list-reset.contacts__grid 
+        li.contacts__cell 
+          +svg('phone-filled', 'contacts')
+          span.contacts__capture Отдел продаж:
+          a(href="tel:83812507555").link-reset.contacts__link +8(3812) 507-555
+          a(href="tel:83812700999").link-reset.contacts__link +8(3812) 700-999
+        li.contacts__cell 
+          +svg('mappoint', 'contacts')
+          span.contacts__capture Офисы продаж:
+          span.contacts__addr г. Омск, ул.&#160;70&#160;лет Октября, 10
+          span.contacts__addr г. Омск, ул. Осоавиахимовская, 294а
+        li.contacts__cell 
+          +svg('mail', 'contacts')
+          a(href="mailto:newwin@mail.ru").link-reset.contacts__link newwin@mail.ru
+        li.contacts__cell 
+          span.contacts__capture Адрес производства:
+          span.contacts__addr г. Омск, ул. Осоавиахимовская, 294а
+
