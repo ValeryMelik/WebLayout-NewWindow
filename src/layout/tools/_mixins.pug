@@ -12,8 +12,8 @@ mixin linkInItem(itemClass, linkClass, linkId, text)
   li(class=itemClass)
     a.link-reset(class=linkClass href="#" id=`${linkId}-link`)=text
 
-mixin btn-primary(parent) 
-  button.btn-reset(type="click" class=`${parent}__btn btn btn_primary`) Расчет вашего проекта
+mixin btn-primary(parent, typename='click' ,text='Расчет вашего проекта') 
+  button.btn-reset(type=typename class=`${parent}__btn btn btn_primary`)=text
 
 mixin btn-secondary(parent) 
   button.btn-reset(type="click" class=`${parent}__btn btn btn_secondary`) ПОЛУЧИТЬ РАСЧЕТ

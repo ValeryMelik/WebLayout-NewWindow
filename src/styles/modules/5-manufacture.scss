@@ -1,6 +1,8 @@
 .manufacture {
   position: relative;
 
+  color: $white;
+
   &::before {
     content: "";
     position: absolute;

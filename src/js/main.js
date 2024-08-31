@@ -1,11 +1,6 @@
-// import './modules/header/accordeon-main.js';
-// import './modules/header/burger.js';
-// import './modules/header/choices.js';
-// import './modules/header/find.js';
-// import './modules/header/smooth-scroll.js';
-
-// import './modules/swiper/swiper-main.js';
-// import './modules/main/showmore.js';
-// import './modules/validator/validator-main.js';
-
+import './modules/smooth-scroll.js';
 import './modules/map.js';
+import './modules/modal-1.js';
+import './modules/validate.js';
+import './modules/showmore.js';
+import './modules/accordion.js';

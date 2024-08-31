@@ -26,13 +26,13 @@ section#portfolio-section.portfolio
               .gosobj__block
                 h4.title-reset.gosobj__name АО Транснефть
                 p.margin-reset.gosobj__descr г. Омск
-    .portfolio__comobj.comobj
+    .portfolio__comobj.comobj.accordion
       .comobj__head
         h3.title-reset.comobj__title Коммерческие объекты
-        button.btn-reset.comobj__btn 
-          span.comobj__btn-capture Развернуть
-          +svg('arrow-short', 'comobj')
-      .comobj__body 
+        button.btn-reset.comobj__btn.accordion__btn
+          span.accordion__capture Свернуть
+          +svg('arrow-short', 'accordion')
+      .comobj__body.accordion__body 
         ul.list-reset.comobj__grid 
           li.comobj__cell
             img(src="../img/portfolio/pf-comobj-bc-1920.webp", alt="БЦ, Фрунзе, 47").comobj__img
@@ -74,13 +74,13 @@ section#portfolio-section.portfolio
             .comobj__block
               h4.title-reset.comobj__name Гипермаркет «Магнит»
               p.margin-reset.comobj__descr г. Омск
-    .portfolio__liveobj.liveobj
+    .portfolio__liveobj.liveobj.accordion
       .liveobj__head
-        h3.title-reset.liveobj__title Коммерческие объекты
-        button.btn-reset.liveobj__btn 
-          span.liveobj__btn-capture Развернуть
-          +svg('arrow-short', 'liveobj')
-      .liveobj__body 
+        h3.title-reset.liveobj__title Жилые комплексы
+        button.btn-reset.liveobj__btn.accordion__btn
+          span.accordion__capture Свернуть
+          +svg('arrow-short', 'accordion')
+      .liveobj__body.accordion__body
         ul.list-reset.liveobj__grid 
           li.liveobj__cell
             img(src="../img/portfolio/pf-liveobj-univ-1920.webp", alt="ЖК “Университетский”").liveobj__img
@@ -122,6 +122,6 @@ section#portfolio-section.portfolio
             .curobj__block
               h4.title-reset.curobj__name Брусника&#160;&#8212; Кварталы Драверта
               p.margin-reset.curobj__descr г. Омск
-    button.btn-reset.portfolio__btn
-      span.portfolio__btn-capture Посмотреть другие объекты
-      +svg('arrow','portfolio')
+    button.btn-reset.portfolio__btn.showmore
+      span.showmore__capture Посмотреть другие объекты
+      +svg('arrow','showmore')
