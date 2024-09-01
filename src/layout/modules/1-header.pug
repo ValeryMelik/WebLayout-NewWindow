@@ -9,10 +9,13 @@ header.header
         +linkInItem('header__item', 'header__link', 'about-us', 'О нас')
         +linkInItem('header__item', 'header__link', 'manufacture', 'Производство')
         +linkInItem('header__item', 'header__link', 'contacts', 'Контакты')
-    .header__phones.phones 
-      .phones__block 
-        +svg('phone','phones')
-        a(href='tel:+73812700999').link-reset.phones__link +7&nbsp;(3812)&nbsp;700-999
-      .phones__block 
-        +svg('phone','phones')
-        a(href='tel:+738125075559').link-reset.phones__link +7&nbsp;(3812)&nbsp;507-555
+      .header__phones.phones 
+        .phones__block 
+          +svg('phone','phones')
+          a(href='tel:+73812700999').link-reset.phones__link +7&nbsp;(3812)&nbsp;700-999
+        .phones__block 
+          +svg('phone','phones')
+          a(href='tel:+738125075559').link-reset.phones__link +7&nbsp;(3812)&nbsp;507-555
+    button#burger.btn-reset.header__burger
+      +svg('bopened', 'header')
+      +svg('bclosed', 'header')

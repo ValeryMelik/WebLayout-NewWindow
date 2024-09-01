@@ -55,3 +55,22 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .manufacture {
+    &::before {
+      background: $grey-dark;
+      filter: none;
+    }
+
+    &__grid {
+      grid-template: 1fr / 1fr;
+
+      grid-template-areas: "cell-2";
+    }
+
+    &__cell:not(:nth-child(2)) {
+      display: none;
+    }
+  }
+}

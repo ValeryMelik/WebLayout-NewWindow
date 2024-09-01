@@ -5,20 +5,28 @@
   padding: 100px 12px;
 }
 
-@media (max-width: 1304px) {
+@media (max-width: 576px) {
   .container {
-    max-width: 976px;
+    max-width: 536px;
+
+    padding: 40px 20px;
   }
 }
 
-@media (max-width: 931px) {
-  .container {
-    max-width: 648px;
-  }
-}
+// @media (max-width: 1304px) {
+//   .container {
+//     max-width: 976px;
+//   }
+// }
 
-@media (max-width: 500px) {
-  .container {
-    max-width: 450px;
-  }
-}
+// @media (max-width: 931px) {
+//   .container {
+//     max-width: 648px;
+//   }
+// }
+
+// @media (max-width: 500px) {
+//   .container {
+//     max-width: 450px;
+//   }
+// }

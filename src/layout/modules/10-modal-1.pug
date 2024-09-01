@@ -10,6 +10,6 @@
       input(type="text" id='number' name='number' placeholder='Введите ваш телефон').modal__input
     +btn-primary('modal', 'submit', 'ХОЧУ УВИДЕТЬ')
     p.margin-reset.modal__text Нажимая на&#160;кнопку, я&#160;даю своё согласие на&#160;обработку персональных данных
-    button.btn-reset.modal__closer 
+    button(type='button').btn-reset.modal__closer 
       span.modal__closercap Закрыть
       +svg('close', 'modal')
