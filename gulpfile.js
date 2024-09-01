@@ -52,4 +52,4 @@ export const dev = gulp.series(
 );
 
 // production mode
-export const build = gulp.series(reset, mainTasks, server);
+export const build = gulp.series(reset, mainTasks);

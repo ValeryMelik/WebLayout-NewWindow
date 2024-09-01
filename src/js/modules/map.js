@@ -1,21 +1,3 @@
-// import { load } from '@2gis/mapgl';
-
-// async function start() {
-//   const mapglAPI = await load();
-
-//   const map = new mapglAPI.Map('map', {
-//     center: [73.307, 54.986402],
-//     zoom: 17,
-//     key: 'a4059db6-e786-4f71-aa3b-dde59f7311ac',
-//   });
-
-//   const marker = new mapglAPI.Marker(map, {
-//     coordinates: [73.311555, 54.986402],
-//   });
-// }
-
-// start();
-
 import ymaps from 'ymaps';
 
 ymaps
@@ -23,10 +5,16 @@ ymaps
     'https://api-maps.yandex.ru/2.1/?apikey=c4a41813-1996-4940-b589-a9f875e47c87&lang=ru_RU'
   )
   .then((maps) => {
+    // Инициализируем карту с центром, зависящим от текущей ширины окна
+    const initialCenter =
+      window.innerWidth <= 576
+        ? [54.986402, 73.311555]
+        : [54.986402, 73.307];
+
     const map = new maps.Map(
       'map',
       {
-        center: [54.986402, 73.307],
+        center: initialCenter,
         zoom: 17,
         controls: [],
       },
@@ -50,7 +38,7 @@ ymaps
     map.controls.remove('fullscreenControl'); // Убираем кнопку полноэкранного режима
     map.controls.add('zoomControl'); // Добавляем контрол зума
     map.controls.remove('rulerControl'); // Убираем линейку
-    map.controls.remove('routePanelControl'); //     Убираем панель маршрутов
+    map.controls.remove('routePanelControl'); // Убираем панель маршрутов
 
     map.behaviors.disable('click');
 
@@ -70,5 +58,16 @@ ymaps
     );
 
     map.geoObjects.add(placemark); // Добавляем метку на карту
+
+    // Обработчик изменения размера окна
+    window.addEventListener('resize', () => {
+      const newCenter =
+        window.innerWidth <= 576
+          ? [54.986402, 73.311555]
+          : [54.986402, 73.307];
+
+      // Устанавливаем новый центр карты
+      map.setCenter(newCenter);
+    });
   })
   .catch((error) => console.log('Failed to load Yandex Maps', error));

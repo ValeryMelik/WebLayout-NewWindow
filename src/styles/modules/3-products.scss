@@ -48,3 +48,15 @@
     margin-top: auto;
   }
 }
+
+@media (max-width: 576px) {
+  .products {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+}

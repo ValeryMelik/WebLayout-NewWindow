@@ -60,3 +60,18 @@
     line-height: 13px;
   }
 }
+
+@media (max-width: 576px) {
+  .footer {
+    // text-align: center;
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__block-1 {
+      align-items: center;
+    }
+  }
+}

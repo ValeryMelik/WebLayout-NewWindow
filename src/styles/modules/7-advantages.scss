@@ -31,7 +31,7 @@
     display: grid;
 
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-    row-gap: 40px;
+    gap: 40px;
   }
 
   &__cell {
@@ -40,8 +40,43 @@
     column-gap: 20px;
   }
 
+  &__capture {
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  &__descr {
+    display: none;
+  }
+
   &__svg {
     width: 60px;
     height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .advantages {
+    &::before {
+      background: $grey-new;
+      filter: none;
+    }
+
+    &__grid {
+      grid-template: auto / 1fr;
+
+      grid-template-areas: "cell-2";
+    }
+
+    &__cell {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 10px;
+    }
+
+    &__descr {
+      display: block;
+    }
   }
 }
