@@ -42,7 +42,7 @@
 
   &__list-2 {
     display: grid;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     grid-template-columns: repeat(4, 1fr);
@@ -53,6 +53,8 @@
   }
 
   &__item-2 {
+    margin: 0 auto;
+
     &:nth-child(1) {
       width: 221.25px;
       height: 53.84px;

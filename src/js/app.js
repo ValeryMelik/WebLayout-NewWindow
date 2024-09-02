@@ -5,3 +5,4 @@ import './modules/validate.js';
 import './modules/showmore.js';
 import './modules/accordion.js';
 import './modules/burger.js';
+import './modules/manufacture-slider.js';
