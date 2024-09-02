@@ -52,7 +52,7 @@
 
   &__grid {
     display: grid;
-    grid-template: auto / repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(274.25px, 1fr));
     gap: 4px;
   }
 
@@ -60,7 +60,9 @@
     display: flex;
     flex-direction: column;
 
-    max-width: 274.25px;
+    width: 100%;
+
+    // max-width: 274.25px;
   }
 
   &__img {
@@ -119,7 +121,7 @@
 
   &__grid {
     display: grid;
-    grid-template: auto / repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 4px;
   }
 
@@ -127,7 +129,7 @@
     display: flex;
     flex-direction: column;
 
-    max-width: 274.25px;
+    // max-width: 274.25px;
   }
 
   &__img {
@@ -385,7 +387,7 @@
 .accordion {
   &__body {
     overflow: hidden;
-    max-height: 750px;
+    max-height: 601px;
     transition: max-height 0.5s ease-in-out;
 
     &_collapsed {
@@ -452,8 +454,6 @@
   .comobj,
   .liveobj,
   .curobj {
-
-
     &__grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -471,12 +471,12 @@
 
   .liveobj {
     &__grid {
-      grid-template-areas: 
-      "cell-1"
-      "cell-2"
-      "cell-3"
-      "cell-4"
-      "cell-5";
+      grid-template-areas:
+        "cell-1"
+        "cell-2"
+        "cell-3"
+        "cell-4"
+        "cell-5";
     }
   }
 
@@ -485,7 +485,7 @@
       overflow: hidden;
       max-height: 3000px;
       transition: max-height 0.5s ease-in-out;
-  
+
       &_collapsed {
         max-height: 600px;
       }
@@ -493,7 +493,6 @@
 
     &__btn {
       padding-left: 15px;
-
     }
 
     &__capture {

@@ -41,9 +41,13 @@
   }
 
   &__list-2 {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: center;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 32px;
 
     margin-bottom: 40px;
   }
@@ -77,6 +81,14 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .about-us {
+    &__list-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .about-us {
     &__list {
@@ -85,10 +97,12 @@
     }
 
     &__list-2 {
-      flex-direction: column;
-      gap: 60px;
+      display: flex;
+      flex-direction: column; // Располагает элементы в колонку
+      align-items: center; // Центрирует элементы по горизонтали
 
-      margin: 0;
+      gap: 60px;
+      margin-bottom: 0;
     }
 
     &__subtitle:last-of-type,

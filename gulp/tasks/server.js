@@ -14,6 +14,6 @@ export function server(done) {
 }
 
 export function reload(done) {
-  app.plugins.browserSync.get(page).reload();
+  app.plugins.browserSync.get('index').reload();
   done();
 }

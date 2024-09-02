@@ -30,7 +30,7 @@
   &__grid {
     display: grid;
 
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template:auto / repeat(auto-fill, minmax(274.25px, 1fr)) ;
     gap: 40px;
   }
 
