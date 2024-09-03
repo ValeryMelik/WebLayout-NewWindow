@@ -19,6 +19,7 @@ import { reset } from './gulp/tasks/reset.js';
 import { layout } from './gulp/tasks/pug.js';
 import { style } from './gulp/tasks/style.js';
 import { script } from './gulp/tasks/script.js';
+import { php } from './gulp/tasks/php.js';
 import { images } from './gulp/tasks/image.js';
 import { copyWoff2, createWoff2fromTtf } from './gulp/tasks/fonts.js';
 import {
@@ -33,6 +34,7 @@ function watcher() {
   gulp.watch(path.watch.layout, gulp.series(layout, reload));
   gulp.watch(path.watch.style, gulp.series(style, reload));
   gulp.watch(path.watch.script, gulp.series(script, reload));
+  gulp.watch(path.watch.php, gulp.series(php, reload));
   gulp.watch(path.watch.img, gulp.series(images, reload));
   gulp.watch(path.watch.svg, gulp.series(sprite, reload));
   gulp.watch(path.watch.font, gulp.series(fonts, reload));
@@ -41,7 +43,15 @@ function watcher() {
 // tasks
 const sprite = gulp.series(copySvgReady, handleSvg, createSvgSpite);
 const fonts = gulp.parallel(copyWoff2, createWoff2fromTtf);
-const mainTasks = gulp.parallel(layout, style, script, images, sprite, fonts);
+const mainTasks = gulp.parallel(
+  layout,
+  style,
+  script,
+  php,
+  images,
+  sprite,
+  fonts
+);
 
 // developer mode
 export const dev = gulp.series(

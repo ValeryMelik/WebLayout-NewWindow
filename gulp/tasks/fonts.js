@@ -19,14 +19,14 @@ export const copyWoff2 = () => {
 export const createWoff2fromTtf = () => {
   return app.gulp
     .src(app.path.src.font.ttf)
-    .pipe(
-      app.plugins.plumber(
-        app.plugins.notify.onError({
-          title: 'FONTS',
-          message: 'Error: <%= error.message %>',
-        })
-      )
-    )
+    // .pipe(
+    //   app.plugins.plumber(
+    //     app.plugins.notify.onError({
+    //       title: 'FONTS',
+    //       message: 'Error: <%= error.message %>',
+    //     })
+    //   )
+    // )
     .pipe(app.plugins.newer(app.path.build.font))
     .pipe(ttf2woff2())
     .pipe(app.gulp.dest(app.path.build.font))

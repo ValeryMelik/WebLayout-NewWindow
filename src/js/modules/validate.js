@@ -17,11 +17,11 @@ function validateName(check = false) {
   if (check) return checkRes;
 
   if (checkRes) {
-    nameInputBlock.classList.remove('modal__labinp_success');
-    nameInputBlock.classList.add('modal__labinp_error');
+    nameInputBlock.classList.remove('form__labinp_success');
+    nameInputBlock.classList.add('form__labinp_error');
   } else {
-    nameInputBlock.classList.add('modal__labinp_success');
-    nameInputBlock.classList.remove('modal__labinp_error');
+    nameInputBlock.classList.add('form__labinp_success');
+    nameInputBlock.classList.remove('form__labinp_error');
   }
 }
 
@@ -33,11 +33,11 @@ function validatePhone(check = false) {
   if (check) return checkRes;
 
   if (checkRes) {
-    phoneInputBlock.classList.remove('modal__labinp_success');
-    phoneInputBlock.classList.add('modal__labinp_error');
+    phoneInputBlock.classList.remove('form__labinp_success');
+    phoneInputBlock.classList.add('form__labinp_error');
   } else {
-    phoneInputBlock.classList.add('modal__labinp_success');
-    phoneInputBlock.classList.remove('modal__labinp_error');
+    phoneInputBlock.classList.add('form__labinp_success');
+    phoneInputBlock.classList.remove('form__labinp_error');
   }
 }
 

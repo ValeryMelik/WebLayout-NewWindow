@@ -64,10 +64,10 @@
   .contacts {
     position: static;
 
-    border-left: 2px solid $primary;
-
     &__container {
       height: initial;
+
+      border-left: 2px solid $primary;
     }
 
     &__block {

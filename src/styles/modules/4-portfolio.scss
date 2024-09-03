@@ -62,7 +62,7 @@
 
     width: 100%;
 
-    // max-width: 274.25px;
+    cursor: pointer;
   }
 
   &__img {
@@ -129,7 +129,7 @@
     display: flex;
     flex-direction: column;
 
-    // max-width: 274.25px;
+    cursor: pointer;
   }
 
   &__img {
@@ -198,6 +198,8 @@
   &__cell {
     display: flex;
     flex-direction: column;
+
+    cursor: pointer;
   }
 
   &__img {
@@ -277,6 +279,8 @@
   &__cell {
     display: flex;
     flex-direction: column;
+
+    cursor: pointer;
   }
 
   &__img {
@@ -434,10 +438,10 @@
     fill: $primary;
 
     transition: fill 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: rotateX(180deg);
+    transform: rotateX(0);
 
     &_rotated {
-      transform: rotateX(0);
+      transform: rotateX(180deg);
     }
   }
 }

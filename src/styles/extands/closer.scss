@@ -1,0 +1,41 @@
+.closer {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  padding: 20px 16px;
+
+  background-color: $white;
+
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  &:hover {
+    span {
+      color: $primary;
+    }
+
+    svg {
+      fill: $primary;
+    }
+  }
+
+  &__capture {
+    color: $grey-light;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__svg {
+    width: 16px;
+    height: 16px;
+
+    fill: $grey-light;
+
+    transition: fill 0.3s ease-in-out;
+  }
+}

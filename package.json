@@ -52,6 +52,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "swiper": "^11.1.12",
     "webpack-cli": "^5.1.4",
     "ymaps": "^0.2.1"
   }

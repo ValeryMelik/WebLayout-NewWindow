@@ -16,7 +16,7 @@ section#portfolio-section.portfolio
               .gosobj__block
                 h4.title-reset.gosobj__name Кадетский Корпус
                 p.margin-reset.gosobj__descr г. Омск
-            li.gosobj__cell
+            li#luzhniki-cell.gosobj__cell
               img(src="../img/portfolio/pf-gosobj-luzh-1920.webp", alt="МСК Лужники").gosobj__img
               .gosobj__block
                 h4.title-reset.gosobj__name МСК Лужники
@@ -30,9 +30,9 @@ section#portfolio-section.portfolio
       .comobj__head
         h3.title-reset.comobj__title Коммерческие объекты
         button.btn-reset.comobj__btn.accordion__btn
-          span.accordion__capture Свернуть
+          span.accordion__capture Развернуть
           +svg('arrow-short', 'accordion')
-      .comobj__body.accordion__body 
+      .comobj__body.accordion__body.accordion__body_collapsed 
         ul.list-reset.comobj__grid 
           li.comobj__cell
             img(src="../img/portfolio/pf-comobj-bc-1920.webp", alt="БЦ, Фрунзе, 47").comobj__img
@@ -78,9 +78,9 @@ section#portfolio-section.portfolio
       .liveobj__head
         h3.title-reset.liveobj__title Жилые комплексы
         button.btn-reset.liveobj__btn.accordion__btn
-          span.accordion__capture Свернуть
+          span.accordion__capture Развернуть
           +svg('arrow-short', 'accordion')
-      .liveobj__body.accordion__body
+      .liveobj__body.accordion__body.accordion__body_collapsed 
         ul.list-reset.liveobj__grid 
           li.liveobj__cell
             img(src="../img/portfolio/pf-liveobj-univ-1920.webp", alt="ЖК “Университетский”").liveobj__img

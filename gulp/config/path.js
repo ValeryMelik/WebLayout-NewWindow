@@ -18,6 +18,7 @@ export const path = {
     layout: `${srcFolder}/layout/*.pug`,
     style: `${srcFolder}/styles/*.scss`,
     script: `${srcFolder}/js/*.js`,
+    php: `${srcFolder}/php/**/*.*`,
     img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: {
       row: `${srcFolder}/img/svg/row/*.svg`,
@@ -34,6 +35,7 @@ export const path = {
     style: `${srcFolder}/styles/**/*.scss`,
     layout: `${srcFolder}/layout/**/*.pug`,
     script: `${srcFolder}/js/**/*.js`,
+    php: `${srcFolder}/php/**/*.*`,
     img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/svg/**/*.svg`,
     font: `${srcFolder}/fonts/**/*.*`,
