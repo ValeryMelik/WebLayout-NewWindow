@@ -18,6 +18,10 @@ body {
   background-color: $white;
 }
 
+section {
+  scroll-margin-top: 79px;
+}
+
 svg {
   flex-shrink: 0;
   transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;

@@ -64,10 +64,10 @@
   .contacts {
     position: static;
 
+    border-left: 2px solid $primary;
+
     &__container {
       height: initial;
-
-      border-left: 2px solid $primary;
     }
 
     &__block {
@@ -97,8 +97,9 @@
 
   .map {
     position: static;
+    margin-left: -2px;
 
-    width: 100%;
+    width: calc(100% + 2px);
     height: 338px;
   }
 }
