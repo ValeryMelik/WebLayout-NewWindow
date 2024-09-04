@@ -1,50 +1,70 @@
 <?php
-// Импортируем класс PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Подключаем autoload.php от PHPMailer
-require 'PHPMailer/PHPMailerAutoload.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+echo "Скрипт начат<br>";
 
 if (isset($_POST["time_on_site"])) {
+
+    echo "Переменные получены<br>";
 
     $name = trim($_POST["name"]);
     $phone = trim($_POST["number"]);
     $time_on_site = $_POST["time_on_site"];
 
-    // Создаем новый экземпляр PHPMailer
     $mail = new PHPMailer(true);
 
-    // Настройки PHPMailer
-    $mail->CharSet = 'UTF-8';
-    $mail->setFrom('info@media-group.biz', 'Новое Окно'); // От кого письмо
-    $mail->addAddress('negrusti98@gmail.com'); // Кому отправляем письмо
-    $mail->AddCustomHeader('Precedence: bulk;'); // Устанавливаем заголовок для массовой рассылки
+    try {
 
-    // Тема письма
-    $mail->Subject = 'Заявка с сайта Новое Окно';
-    $mail->isHTML(true);
+        $mail->SMTPDebug = 2;
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = '';  // Введите логин отправителя
+        $mail->Password = '';  // Введите пароль отправителя
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587; 
 
-    // Формируем тело письма
-    $message = "<table>";
+        echo "Настройки SMTP установлены<br>";
 
-    if (isset($phone)) {
-        $message .= '<tr><td>Телефон:</td><td>' . htmlspecialchars($phone) . '</td></tr>';
-    }
-    if (isset($name)) {
-        $message .= '<tr><td>Имя:</td><td>' . htmlspecialchars($name) . '</td></tr>';
-    }
-    if (isset($time_on_site)) {
-        $message .= '<tr><td>Время на сайте:</td><td>' . htmlspecialchars($time_on_site) . '</td></tr>';
-    }
+        $mail->CharSet = 'UTF-8';
+        $mail->setFrom('', 'Новое Окно'); // Введите логин отправителя
+        $mail->addAddress(''); // Введите логин получателя
+        $mail->AddCustomHeader('Precedence: bulk;'); 
 
-    $message .= "</table>";
-    $mail->Body = $message;
+        $mail->Subject = 'Заявка с сайта Новое Окно';
+        $mail->isHTML(true);
 
-    // Проверяем время на сайте и отправляем почту
-    if ($time_on_site > 7) {
-        $mail->send();
-        echo "mailsend";
+        $message = "<table>";
+
+        if (isset($phone)) {
+            $message .= '<tr><td>Телефон:</td><td>' . htmlspecialchars($phone) . '</td></tr>';
+        }
+        if (isset($name)) {
+            $message .= '<tr><td>Имя:</td><td>' . htmlspecialchars($name) . '</td></tr>';
+        }
+        if (isset($time_on_site)) {
+            $message .= '<tr><td>Время на сайте:</td><td>' . htmlspecialchars($time_on_site) . '</td></tr>';
+        }
+
+        $message .= "</table>";
+        $mail->Body = $message;
+
+        echo "Тело письма сформировано<br>";
+
+        if ($time_on_site > 7) {
+            $mail->send();
+            echo "Письмо успешно отправлено<br>";
+        }
+    } catch (Exception $e) {
+        echo "Ошибка при отправке: {$mail->ErrorInfo}<br>";
     }
 }
 ?>

@@ -20,13 +20,18 @@ form.addEventListener('submit', (event) => {
   })
   .then(response => response.text())
   .then(data => {
-    console.log(data); // Выводим ответ сервера в консоль
-    alert('Ваша заявка успешно отправлена!');
+    console.log(data); 
+    if (data.includes("mailsend")) {
+      alert('Ваша заявка успешно отправлена!');
+    } else {
+      alert('Произошла ошибка при отправке: ' + data); 
+    }
   })
   .catch(error => console.error('Ошибка:', error));
 
   closeAll();
 });
+
 
 function toggleFormWindow(fn) {
   form.classList.toggle('modal__window_active', fn);
