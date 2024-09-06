@@ -1,0 +1,129 @@
+.luzhniki,
+.tretyak,
+.cadet,
+.transnef,
+.frunze-47,
+.metromall,
+.cosmos,
+.frunze-38,
+.tk-22dec,
+.tk-okay,
+.kfc,
+.magnit,
+.univer,
+.duckmount,
+.dom4sever,
+.tundra, 
+.towmhouses,
+.greenIsland,
+.brusnkika {
+  &__container {
+    display: flex;
+
+    width: 100%;
+    max-width: 1109px;
+    height: 535px;
+  }
+
+  &__mainimg {
+    max-width: 50%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 60px 40px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    color: $primary;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+  }
+
+  &__capture {
+    margin-bottom: 20px;
+
+    color: $primary;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.29px;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__square {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    background-color: $primary;
+  }
+
+  &__descr {
+    font-size: 14px;
+
+    line-height: 17px;
+    text-align: left;
+  }
+
+  &__img {
+    margin-top: auto;
+
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .luzhniki,
+  .tretyak,
+  .cadet,
+  .transnef,
+  .frunze-47,
+  .metromall,
+  .cosmos,
+  .frunze-38,
+  .tk-22dec,
+  .tk-okay,
+  .kfc,
+  .magnit {
+    &__container {
+      flex-direction: column;
+
+      height: fit-content;
+    }
+
+    &__mainimg {
+      max-width: 100%;
+
+      max-height: 250px;
+      object-fit: cover;
+    }
+  }
+}

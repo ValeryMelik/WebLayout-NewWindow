@@ -33,7 +33,7 @@ import { server, reload } from './gulp/tasks/server.js';
 // watcher func
 function watcher() {
   gulp.watch(path.watch.layout, gulp.series(layout, reload));
-  // gulp.watch(path.watch.style, gulp.series(style, purgeCSS, reload));
+  gulp.watch(path.watch.style, gulp.series(style, reload));
   gulp.watch(path.watch.script, gulp.series(script, reload));
   gulp.watch(path.watch.php, gulp.series(php, reload));
   gulp.watch(path.watch.img, gulp.series(images, reload));
