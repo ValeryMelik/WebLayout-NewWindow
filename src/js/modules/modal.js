@@ -6,32 +6,37 @@ function toggleModal(fn) {
 }
 
 const form = document.getElementById('form');
-
-// let startTime = Date.now();
+const timeOnSiteInput = form.querySelector('input[name="time_on_site"]');
+let startTime = Date.now();
 
 form.addEventListener('submit', (event) => {
-  event.preventDefault(); // Отменить стандартное поведение формы
+  event.preventDefault();
 
-  var formData = new FormData(form);
+  const timeOnSite = Math.floor((Date.now() - startTime) / 1000);
+  timeOnSiteInput.value = timeOnSite;
+
+  const formData = new FormData(form);
+  for (let [key, value] of formData.entries()) {
+    console.log(`${key}: ${value}`);
+  }
 
   fetch('sendit.php', {
     method: 'POST',
-    body: formData
+    body: formData,
   })
-  .then(response => response.text())
-  .then(data => {
-    console.log(data); 
-    if (data.includes("mailsend")) {
-      alert('Ваша заявка успешно отправлена!');
-    } else {
-      alert('Произошла ошибка при отправке: ' + data); 
-    }
-  })
-  .catch(error => console.error('Ошибка:', error));
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      if (data.includes('mailsend')) {
+        alert('Ваша заявка успешно отправлена!');
+      } else {
+        alert('Произошла ошибка при отправке: ' + data);
+      }
+    })
+    .catch((error) => console.error('Ошибка:', error));
 
   closeAll();
 });
-
 
 function toggleFormWindow(fn) {
   form.classList.toggle('modal__window_active', fn);
@@ -99,3 +104,13 @@ function toggleLuzhnikiWindow(fn = true) {
 }
 
 luzhnikiCell.addEventListener('click', toggleLuzhnikiWindow);
+
+const tretyakCell = document.getElementById('tretyak-cell');
+const tretyakWindow = document.getElementById('tretyak-modal');
+
+function toggleTretyakWindow(fn = true) {
+  toggleModal(fn);
+  tretyakWindow.classList.toggle('modal__window_active', fn);
+}
+
+tretyakCell.addEventListener('click', toggleTretyakWindow);

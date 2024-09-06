@@ -5,20 +5,8 @@ export const layout = () => {
   return (
     app.gulp
       .src(app.path.src.layout)
-      // .pipe(
-      //   app.plugins.plumber(
-      //     app.plugins.notify.onError({
-      //       title: 'PUG',
-      //       message: 'Error: <%= error.message %>',
-      //     })
-      //   )
-      // )
+
       .pipe(gulpPug({ pretty: app.isDev, verbose: app.isDev }))
-      // .pipe(
-      //   app.plugins.rename({
-      //     basename: index,
-      //   })
-      // )
       .pipe(
         app.plugins.size({
           showFiles: true,
@@ -41,6 +29,5 @@ export const layout = () => {
         )
       )
       .pipe(app.gulp.dest(app.path.build.root))
-      // .pipe(app.plugins.browserSync.stream())
   );
 };

@@ -1,0 +1,16 @@
+form(type='submit' action="sendit.php" method="POST")#form.modal__window.form
+  .form__container
+    h2.title-reset.form__title Узнайте цену сразу
+    p.margin-reset.form__descr Оставьте заявку&#160;&#8212; мы&#160;сообщим предварительную цену сразу по&#160;телефону и&#160;запишем вас на&#160;бесплатный замер, чтобы рассчитать точную стоимость окон с&#160;установкой
+    .form__labinp 
+      label(for="name").form__label  Имя #[span.form__error.form__error_name.form__error_show Не может содержать цифры и спецсимволы]
+      input(type="text" id='name' name='name' placeholder='Введите ваше имя').form__input
+    .form__labinp 
+      label(for="number").form__label Телефон #[span.form__error.form__error_number.form__error_show Может содержать только цифры]
+      input(type="text" id='number' name='number' placeholder='Введите ваш телефон').form__input
+    input(type="hidden" name="time_on_site" value="")
+    +btn-primary('form', 'submit', 'Оставить заявку')
+    button(type='button').btn-reset.form__text.btn-privpol Нажимая на&#160;кнопку, я&#160;даю своё согласие на&#160;обработку персональных данных
+    button(type='button').btn-reset.form__closer.closer 
+      span.closer__capture Закрыть
+      +svg('close', 'closer')

@@ -27,12 +27,13 @@ import {
   handleSvg,
   createSvgSpite,
 } from './gulp/tasks/sprite.js';
+// import { purgeCSS } from './gulp/tasks/purgecss.js';
 import { server, reload } from './gulp/tasks/server.js';
 
 // watcher func
 function watcher() {
   gulp.watch(path.watch.layout, gulp.series(layout, reload));
-  gulp.watch(path.watch.style, gulp.series(style, reload));
+  // gulp.watch(path.watch.style, gulp.series(style, purgeCSS, reload));
   gulp.watch(path.watch.script, gulp.series(script, reload));
   gulp.watch(path.watch.php, gulp.series(php, reload));
   gulp.watch(path.watch.img, gulp.series(images, reload));
@@ -56,10 +57,14 @@ const mainTasks = gulp.parallel(
 // developer mode
 export const dev = gulp.series(
   reset,
-  layout,
   mainTasks,
+  // purgeCSS,
   gulp.parallel(watcher, server)
 );
 
 // production mode
-export const build = gulp.series(reset, mainTasks);
+export const build = gulp.series(
+  reset,
+  mainTasks
+  // purgeCSS
+);

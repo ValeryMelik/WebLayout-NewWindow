@@ -42,9 +42,11 @@
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
     "gulp-ttf2woff2": "^4.0.1",
-    "gulp-uglify-es": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "gulp-version-number": "^0.2.4",
     "gulp-webp": "^4.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
     "sass": "^1.60.0",
     "style-loader": "^3.3.3",
     "vinyl-named": "^1.1.0",
@@ -52,6 +54,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "gulp-purgecss": "^6.0.0",
+    "inputmask": "^5.0.9",
     "swiper": "^11.1.12",
     "webpack-cli": "^5.1.4",
     "ymaps": "^0.2.1"

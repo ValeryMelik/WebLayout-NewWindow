@@ -7,14 +7,6 @@ export const copySvgReady = () => {
     app.gulp
       .src(app.path.src.svg.ready)
       .pipe(svgmin())
-      // .pipe(
-      //   app.plugins.plumber(
-      //     app.plugins.notify.onError({
-      //       title: 'SVG',
-      //       message: 'Error: <%= error.message %>',
-      //     })
-      //   )
-      // )
       .pipe(app.plugins.newer(app.path.src.svg.handled))
       .pipe(app.gulp.dest(app.path.src.svg.handled))
   );
@@ -24,14 +16,6 @@ export const handleSvg = () => {
     app.gulp
       .src(app.path.src.svg.row)
       .pipe(svgmin())
-      // .pipe(
-      //   app.plugins.plumber(
-      //     app.plugins.notify.onError({
-      //       title: 'SVG',
-      //       message: 'Error: <%= error.message %>',
-      //     })
-      //   )
-      // )
       .pipe(app.plugins.newer(app.path.src.svg.handled))
       .pipe(
         cheerio({
@@ -52,14 +36,6 @@ export const createSvgSpite = () => {
   return (
     app.gulp
       .src(app.path.src.svg.handled + '*.svg')
-      // .pipe(
-      //   app.plugins.plumber(
-      //     app.plugins.notify.onError({
-      //       title: 'SVG',
-      //       message: 'Error: <%= error.message %>',
-      //     })
-      //   )
-      // )
       .pipe(
         svgSprite({
           mode: {
@@ -76,5 +52,4 @@ export const createSvgSpite = () => {
       )
       .pipe(app.gulp.dest(app.path.build.img))
   );
-  // .pipe(app.plugins.browserSync.stream());
 };
