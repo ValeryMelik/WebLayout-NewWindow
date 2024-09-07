@@ -13,10 +13,10 @@
 .univer,
 .duckmount,
 .dom4sever,
-.tundra, 
-.towmhouses,
+.tundra,
+.townhouses,
 .greenIsland,
-.brusnkika {
+.brusnika {
   &__container {
     display: flex;
 
@@ -112,7 +112,14 @@
   .tk-22dec,
   .tk-okay,
   .kfc,
-  .magnit {
+  .magnit,
+  .univer,
+  .duckmount,
+  .dom4sever,
+  .tundra,
+  .townhouses,
+  .greenIsland,
+  .brusnika {
     &__container {
       flex-direction: column;
 

@@ -214,3 +214,73 @@ function toggleMagnitWindow(fn = true) {
 }
 
 magnitCell.addEventListener('click', toggleMagnitWindow);
+
+const univerCell = document.getElementById('univer-cell');
+const univerWindow = document.getElementById('univer-modal');
+
+function toggleUniverWindow(fn = true) {
+  toggleModal(fn);
+  univerWindow.classList.toggle('modal__window_active', fn);
+}
+
+univerCell.addEventListener('click', toggleUniverWindow);
+
+const duckmountCell = document.getElementById('duckmount-cell');
+const duckmountWindow = document.getElementById('duckmount-modal');
+
+function toggleDuckmountWindow(fn = true) {
+  toggleModal(fn);
+  duckmountWindow.classList.toggle('modal__window_active', fn);
+}
+
+duckmountCell.addEventListener('click', toggleDuckmountWindow);
+
+const dom4severCell = document.getElementById('dom4sever-cell');
+const dom4severWindow = document.getElementById('dom4sever-modal');
+
+function toggleDom4severWindow(fn = true) {
+  toggleModal(fn);
+  dom4severWindow.classList.toggle('modal__window_active', fn);
+}
+
+dom4severCell.addEventListener('click', toggleDom4severWindow);
+
+const tundraCell = document.getElementById('tundra-cell');
+const tundraWindow = document.getElementById('tundra-modal');
+
+function toggleTundraWindow(fn = true) {
+  toggleModal(fn);
+  tundraWindow.classList.toggle('modal__window_active', fn);
+}
+
+tundraCell.addEventListener('click', toggleTundraWindow);
+
+const townhousesCell = document.getElementById('townhouses-cell');
+const townhousesWindow = document.getElementById('townhouses-modal');
+
+function toggleTownhousesWindow(fn = true) {
+  toggleModal(fn);
+  townhousesWindow.classList.toggle('modal__window_active', fn);
+}
+
+townhousesCell.addEventListener('click', toggleTownhousesWindow);
+
+const greenIslandCell = document.getElementById('greenIsland-cell');
+const greenIslandWindow = document.getElementById('greenIsland-modal');
+
+function toggleGreenIslandWindow(fn = true) {
+  toggleModal(fn);
+  greenIslandWindow.classList.toggle('modal__window_active', fn);
+}
+
+greenIslandCell.addEventListener('click', toggleGreenIslandWindow);
+
+const brusnikaCell = document.getElementById('brusnika-cell');
+const brusnikaWindow = document.getElementById('brusnika-modal');
+
+function toggleBrusnikaWindow(fn = true) {
+  toggleModal(fn);
+  brusnikaWindow.classList.toggle('modal__window_active', fn);
+}
+
+brusnikaCell.addEventListener('click', toggleBrusnikaWindow);
